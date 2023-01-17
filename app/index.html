@@ -10,16 +10,24 @@
     </style>
   </head>
   <body>
-    <h1>System information</h1>
+    <h2>System information</h2>    
     <pre id="timestamp">error</pre>
-    <pre id="content">error</pre>
-    <script>
     
+    <a href="timestamp.txt" id="mylink" download>
+      <img src="download.ico" width="50" height="50">
+    </a>
+
+    <pre id="content">error</pre>
+    
+    <script>
+
 var xhr = new XMLHttpRequest();
 var timestamp = "timestamp.txt";
 
+var link = document.getElementById("mylink");
+
 async function loadFile() {
-  let url = "timestamp.txt";
+  let url = "timestamp.txt"; 
 
   try {
     const response = await fetch(url);
@@ -29,6 +37,8 @@ async function loadFile() {
   } catch (err) {
     console.error(err);
   }
+  
+  link.setAttribute('href', timestamp);
 
   xhr.open("GET", timestamp, true);
   xhr.onload = function() {
