@@ -1,3 +1,4 @@
+created by
 
   SSSSSS     JJJJJJJJJJ
 SSS    SSS   JJJ    JJJ
@@ -8,7 +9,6 @@ SSS                 JJJ
 SSS     SSS  JJJ    JJJ
   SSSSSSS     JJJJJJJJ  
 
-created by
 _Sebastian Jarzebinski_
 
 
