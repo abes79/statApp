@@ -1,4 +1,4 @@
-_____________created by
+            created by
 
   SSSSSS     JJJJJJJJJJ
 SSS    SSS   JJJ    JJJ
