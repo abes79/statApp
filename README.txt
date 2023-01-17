@@ -1,4 +1,4 @@
-created by
+_____________created by
 
   SSSSSS     JJJJJJJJJJ
 SSS    SSS   JJJ    JJJ
@@ -9,7 +9,7 @@ SSS                 JJJ
 SSS     SSS  JJJ    JJJ
   SSSSSSS     JJJJJJJJ  
 
-_Sebastian Jarzebinski_
+ Sebastian Jarzebinski
 
 
 DESCRIPTION::
