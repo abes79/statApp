@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>System information</title>
+    <style>
+    body {
+      color: lightgray;
+      background-color: black;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>System information</h1>
+    <pre id="timestamp">error</pre>
+    <pre id="content">error</pre>
+    <script>
+    
+var xhr = new XMLHttpRequest();
+var timestamp = "timestamp.txt";
+
+async function loadFile() {
+  let url = "timestamp.txt";
+
+  try {
+    const response = await fetch(url);
+    const data = await response.text();
+    timestamp = data.substring(0,data.length-1);
+    document.getElementById("timestamp").innerHTML = timestamp;
+  } catch (err) {
+    console.error(err);
+  }
+
+  xhr.open("GET", timestamp, true);
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      var fileContent = xhr.responseText;
+      document.getElementById("content").innerHTML = fileContent;
+    }
+  }
+
+  xhr.send();
+  console.log(timestamp);
+}
+loadFile();
+setInterval(loadFile, 60000);
+
+    </script>
+  </body>
+</html>

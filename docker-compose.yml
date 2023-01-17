@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  statApp:
+    build: .
+    image: stat_app:latest
+    container_name: statApp
+    ports:
+      - "8000:8000"
+    volumes:
+      - './app:/app'
